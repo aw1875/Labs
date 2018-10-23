@@ -4,8 +4,17 @@ import java.util.*;
 
 public class PrimalityTest
 {
+<<<<<<< HEAD
     public static boolean isPrime(int number)
     {
+=======
+    public static boolean isPrime (int number)
+    {
+        if (number == 0 || number == 1)
+        {
+            return false;
+        }
+>>>>>>> 3fb821ad75724b2a68e07786a4a15e4ef7f3221b
         for (int i = 2; i <= Math.sqrt(number); i++)
         {
             if (number % i == 0)

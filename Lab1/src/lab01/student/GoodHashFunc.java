@@ -4,7 +4,11 @@ import java.util.*;
 
 public class GoodHashFunc
 {
+<<<<<<< HEAD
     public static int computeHash(String str)
+=======
+    public static int computeHash (String str)
+>>>>>>> 3fb821ad75724b2a68e07786a4a15e4ef7f3221b
     {
         int [] hash = new int[str.length()];
 
