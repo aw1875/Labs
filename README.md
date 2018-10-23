@@ -6,3 +6,4 @@
 - Lab 3: Stacks & Queues (Interfaces)
 - Lab 4: Circuit Breaker (Inheritance)
 - Lab 5: Tree Set (Java Collection Framework)
+- Lab 6: BFS/DFS (Graphs)
