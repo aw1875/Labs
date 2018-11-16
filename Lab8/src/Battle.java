@@ -32,7 +32,7 @@ public class Battle extends Thread {
         time = 0;
         while (true) {
             try {
-                Thread.sleep(1);
+                Thread.sleep(1000);
                 time++;
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -54,21 +54,15 @@ public class Battle extends Thread {
                 System.out.println(I1.toString() + "\n");
             }
             if (I1.getHP() <= 0 || I2.getHP() <= 0) {
+                System.out.println("The battle between " + I1.getName() + " and " + I2.getName() + " has ended!!!");
+                if (getWinner().equals(I1)) {
+                    System.out.println(getWinner().getName() + " has defeated " + I2.getName());
+                } else {
+                    System.out.println(getWinner().getName() + " has defeated " + I1.getName());
+                }
                 break;
             }
 
         }
-    }
-
-    public static void main (String [] args) {
-        Instructor I1 = new Instructor("Brown", 1000,100, 200, 5);
-        Instructor I2 = new Instructor("Johnson", 800, 75, 300, 7);
-
-        System.out.println("The battle between " + I1.getName() + " and " + I2.getName() + " has begun!!!");
-
-        Battle b1 = new Battle(I1, I2);
-        b1.start();
-
-        System.out.println("ok");
     }
 }

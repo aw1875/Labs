@@ -1,10 +1,12 @@
-import java.util.ArrayList;
+import java.util.*;
 import java.io.*;
 
 public class BattleRoyale {
-    private ArrayList<Instructor> instructors;
 
-    public ArrayList<Instructor> instructors(String file_name) {
+    public static void main (String [] args) throws InterruptedException {
+        String file_name = "src/b1.txt";
+        int round = 1;
+
         ArrayList<Instructor> instructors = new ArrayList<>();
         try {
             BufferedReader bf = new BufferedReader(new FileReader(file_name));
@@ -21,12 +23,20 @@ public class BattleRoyale {
         } catch (IOException ioe) {
             System.out.println(ioe.getMessage());
         }
-        return instructors;
-    }
 
+        Battle battles [] = new Battle[instructors.size()-1];
+        while (true) {
+            System.out.println("The battle royal is about to begin");
+            System.out.println("Round " + round + " is starting...");
+            for (int i = 0; i < battles.length; i++) {
+                System.out.println("The battle between " + instructors.get(i).getName() + " and " + instructors.get(i+1).getName() + " has begun!!!");
+                battles[i] = new Battle(instructors.get(0), instructors.get(1));
+                battles[i].start();
+            }
 
-    public static void main (String [] args) {
-        String file_name = args[0];
-
+            for (int i = 0; i < battles.length; i++) {
+                battles[i].join();
+            }
+        }
     }
 }
