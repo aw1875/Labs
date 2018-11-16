@@ -60,18 +60,31 @@ public class BoxPuzzle implements Configuration {
         int currItem = 0;
         int width = this.items.get(currItem).getWidth();
         int height = this.items.get(currItem).getHeight();
-        for (int i = 0; i < box.length; i++) {
-            for (int j = 0; j < box[i].length; j++) {
+        for (int i = 0; i < (box.length - width); i++) {
+            for (int j = 0; j < (box[i].length - height); j++) {
                 if (box[i][j] == 0) {
                     BoxPuzzle successor = new BoxPuzzle(this);
-                    successor.box[i][j] = Integer.valueOf(items.get(currItem).getName());
+                    while (i < width) {
+                        while (i < height) {
+                            successor.box[i][j] = Integer.valueOf(items.get(currItem).getName());
+                            j++;
+                            if (j == height) {
+                                j = 0;
+                                break;
+                            }
+                        }
+                        i++;
+                        if (i == width) {
+                            i = 0;
+                            break;
+                        }
+                    }
+                    successors.add(successor);
+                    return successors;
                 }
             }
-
         }
-
-
-        return null;
+        return successors;
     }
 
     /**
@@ -91,14 +104,21 @@ public class BoxPuzzle implements Configuration {
      */
     @Override
     public boolean isGoal() {
-        for (int i = 0; i < box.length; i++) {
-            for (int j = 0; j < box[i].length; j++) {
-                if (box[i][j] == 0) {
-                    return false;
+        for (Item n : items) {
+            String name = n.getName();
+            for (int i = 0; i < box.length; i++) {
+                for (int j = 0; j < box[i].length; j++) {
+                    if (String.valueOf(box[i][j]) == name) {
+                        items.remove(n);
+                    }
                 }
             }
         }
-        return true;
+        if (items.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -126,22 +146,35 @@ public class BoxPuzzle implements Configuration {
      * @param args - command line arguments.
      */
     public static void main(String[] args) {
-
-        //String file_name = args[0];
-        String file_name = "src/t1.txt";
+        int height = 1;
+        int width  = 1;
+        String file_name = args[0];
 
         BoxPuzzle b1 = new BoxPuzzle(7, 7, file_name);
-        /*for (Item i : b1.items) {
-            System.out.println(i.getName() + ": " + i.getWidth() + "x" + i.getHeight());
-        }*/
-
-        Backtracker bt = new Backtracker(false);
+        Backtracker bt = new Backtracker(true);
         Optional<Configuration> result = bt.solve(b1);
         if (!result.isPresent()) {
-            System.out.println("No result");
+            System.out.println("No solution found for this size.\n");
         } else {
-            System.out.println(result.get());
+            System.out.println("Solution found: \n" + result.get());
+            //break;
         }
+
+
+        /*while (true) {
+            System.out.println("Trying box size: " + height + " x " + width);
+            BoxPuzzle b1 = new BoxPuzzle(height, width, file_name);
+            Backtracker bt = new Backtracker(false);
+            Optional<Configuration> result = bt.solve(b1);
+            if (!result.isPresent()) {
+                System.out.println("No solution found for this size.\n");
+            } else {
+                System.out.println("Solution found: \n" + result.get());
+                break;
+            }
+            height++;
+            width++;
+        }*/
     }
 }
 
@@ -155,7 +188,7 @@ class Item {
      *
      * @param name   - Item name
      * @param width  - Item width
-     * @param height - Item heigh
+     * @param height - Item height
      */
     public Item(String name, int width, int height) {
         this.name = name;

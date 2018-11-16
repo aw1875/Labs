@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d496b5c2-bbb8-4a3b-a650-187f7aebb022" name="Default" comment="" />
+=======
+    <list default="true" id="d496b5c2-bbb8-4a3b-a650-187f7aebb022" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab7/Backtracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab7/Backtracker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab7/BoxPuzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab7/BoxPuzzle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab7/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab7/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab7/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab7/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoxPuzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoxPuzzle.java" afterDir="false" />
+    </list>
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +53,37 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1477474621">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1740" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1740" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Lab7" />
@@ -50,11 +93,39 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BoxPuzzle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+            <state relative-caret-position="653">
+              <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+<<<<<<< HEAD
+=======
+                <element signature="e#3306#3307#0" expanded="true" />
+                <marker date="1542084963445" expanded="true" signature="5090:5646" ph="{...}" />
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Backtracker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="795">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+=======
+            <state relative-caret-position="225">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
             </state>
           </provider>
         </entry>
@@ -64,24 +135,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Backtracker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Configuration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" selection-start-line="26" selection-end-line="29" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -118,11 +171,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1507" />
-    <option name="y" value="25" />
-    <option name="width" value="1373" />
-    <option name="height" value="875" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="712" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -132,7 +184,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -150,12 +205,16 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541452421096" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542084963516" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -182,7 +241,7 @@
     <configuration name="BoxPuzzle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BoxPuzzle" />
       <module name="Lab7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="src/t1.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -236,18 +295,31 @@
       <workItem from="1541363225537" duration="8761000" />
       <workItem from="1541725838167" duration="14000" />
       <workItem from="1542054979993" duration="3301000" />
+<<<<<<< HEAD
       <workItem from="1542238891478" duration="21000" />
+=======
+      <workItem from="1542062641218" duration="98000" />
+      <workItem from="1542070451757" duration="9373000" />
+      <workItem from="1542084975073" duration="6000" />
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="13437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1507" y="25" width="1373" height="875" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="22893000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16387473" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17124394" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -255,9 +327,9 @@
       <window_info id="Favorites" order="5" side_tool="true" weight="0.32931423" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.328125" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3971354" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.32739726" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32876712" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3958904" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" weight="0.3287483" />
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -286,6 +358,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/BoxPuzzle.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="405">
           <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
           <folding>
@@ -294,12 +367,21 @@
             <element signature="e#2635#2636#0" expanded="true" />
             <element signature="e#5571#5572#0" expanded="true" />
             <element signature="e#5604#5605#0" expanded="true" />
+=======
+        <state relative-caret-position="653">
+          <caret line="95" column="30" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3306#3307#0" expanded="true" />
+            <marker date="1542084963445" expanded="true" signature="5090:5646" ph="{...}" />
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/t1.txt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="60">
           <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
@@ -316,6 +398,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" selection-start-line="26" selection-end-line="29" selection-end-column="7" />
+=======
+        <state relative-caret-position="990">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/t1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+>>>>>>> 185c56a5ee481445b7bd669b129990c000c4c6e9
         </state>
       </provider>
     </entry>
