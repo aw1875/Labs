@@ -19,20 +19,22 @@ public class Battle extends Thread {
      */
     public Instructor getWinner() {
         if (I1.isAlive()) {
+            I1.resetHP();
             return I1;
         }
+        I2.resetHP();
         return I2;
     }
 
     /**
-     * IDK
+     * Simulates the battle until one instructor has lost (health less <= 0)
      */
     @Override
     public void run() {
         time = 0;
         while (true) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1);
                 time++;
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -64,5 +66,15 @@ public class Battle extends Thread {
             }
 
         }
+    }
+
+    public static void main (String[] args) throws InterruptedException {
+        Instructor I1 = new Instructor("Brown",1000, 100, 200, 5);
+        Instructor I2 = new Instructor("Johnson", 800, 75, 300, 7);
+        Battle b1 = new Battle(I1, I2);
+        System.out.println("The battle between " +  b1.I1.getName() + " and " + b1.I2.getName() + " has begun!!!");
+        b1.start();
+        b1.join();
+        System.out.println("The battle royal has ended...\n" + b1.getWinner().getName() + " is victorious!!!");
     }
 }
