@@ -3,10 +3,18 @@ import java.io.*;
 
 public class BattleRoyale {
 
+    /**
+     * Create list of instructors from given file (command line) and simulate battle royal
+     * @param args
+     * @throws InterruptedException
+     */
     public static void main (String [] args) throws InterruptedException {
-        String file_name = "src/b1.txt";
+        String file_name = args[0];
         int round = 1;
+        int currentBattles = 0;
+        int counter = 0;
         boolean winner = false;
+        String winnerName = null;
 
         ArrayList<Instructor> instructors = new ArrayList<>();
         try {
@@ -28,72 +36,49 @@ public class BattleRoyale {
         Battle battles [] = new Battle[instructors.size()-1];
         System.out.println("The battle royal is about to begin");
         System.out.println("Round " + round + " is starting...");
+
+
         while (winner != true) {
-
-
             for (int i = 0; i < battles.length; i++) {
                 if (instructors.size() > 2) {
-                    battles[i] = new Battle(instructors.get(0), instructors.get(1));
+                    battles[counter] = new Battle(instructors.get(0), instructors.get(1));
                     System.out.println("The battle between " + instructors.get(0).getName() + " and " + instructors.get(1).getName() + " has begun!!!");
                     instructors.remove(0);
                     instructors.remove(0);
-                    battles[i].start();
+                    counter++;
+                    currentBattles++;
+                } else if (instructors.size() == 2) {
+                    battles[counter] = new Battle(instructors.get(0), instructors.get(1));
+                    System.out.println("The battle between " + instructors.get(0).getName() + " and " + instructors.get(1).getName() + " has begun!!!");
+                    instructors.remove(0);
+                    instructors.remove(0);
+                    counter++;
+                    currentBattles++;
                 } else {
-                    /*if (battles[i].isAlive()) {
-                        battles[i].join();
-                        instructors.add(battles[i].getWinner());
+                    if (instructors.size() == 0 && currentBattles == 1) {
+                        battles[0].start();
+                        battles[0].join();
+                        winnerName = battles[0].getWinner().getName();
+                        System.out.println("The battle royal has ended...");
+                        winner = true;
+                        break;
                     } else {
-                        instructors.add(battles[i].getWinner());
-                    }*/
-
-                    try {
-                        for (int j = 0; j < battles.length; j++) {
-                            battles[i].join();
+                        for (int j = 0; j < currentBattles; j++) {
+                            battles[j].start();
                         }
-                    } catch (InterruptedException e) {
-                        System.out.println("ERROR");
+                        for (int j = 0; j < currentBattles; j++) {
+                            battles[j].join();
+                            instructors.add(battles[j].getWinner());
+                        }
                     }
 
                     round++;
+                    counter = 0;
+                    currentBattles = 0;
                     System.out.println("Round " + round + " is starting...");
                 }
             }
-
-
-
-            /*for (int i = 0; i < battles.length; i++) {
-                while (instructors.size() > 2) {
-                    battles[i] = new Battle(instructors.get(0), instructors.get(1));
-                    System.out.println("The battle between " + instructors.get(0).getName() + " and " + instructors.get(1).getName() + " has begun!!!");
-                    instructors.remove(0);
-                    instructors.remove(0);
-                    battles[i].start();
-                }
-
-                for (int j = 0; j < battles.length; j++) {
-                    battles[j].join();
-                    instructors.add(battles[j].getWinner());
-                }
-
-
-
-                while (instructors.size() == 1) {
-                    try {
-                        battles[0].join();
-                        System.out.println("\n\n\nWAITING!!!\n\n\n");
-                        instructors.add(battles[i].getWinner());
-                        wait();
-                        System.out.println("TEST");
-                    } catch (InterruptedException e) {}
-                }
-
-                if (instructors.size() <= 1) {
-                    for (int j = 0; j < battles.length; j++) {
-                        battles[j].join();
-                    }
-                    instructors.add(battles[i].getWinner());
-                }
-            }*/
         }
+        System.out.println(winnerName + " is victorious!!!");
     }
 }

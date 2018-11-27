@@ -67,14 +67,4 @@ public class Battle extends Thread {
 
         }
     }
-
-    public static void main (String[] args) throws InterruptedException {
-        Instructor I1 = new Instructor("Brown",1000, 100, 200, 5);
-        Instructor I2 = new Instructor("Johnson", 800, 75, 300, 7);
-        Battle b1 = new Battle(I1, I2);
-        System.out.println("The battle between " +  b1.I1.getName() + " and " + b1.I2.getName() + " has begun!!!");
-        b1.start();
-        b1.join();
-        System.out.println("The battle royal has ended...\n" + b1.getWinner().getName() + " is victorious!!!");
-    }
 }
