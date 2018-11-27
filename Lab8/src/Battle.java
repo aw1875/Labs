@@ -19,13 +19,15 @@ public class Battle extends Thread {
      */
     public Instructor getWinner() {
         if (I1.isAlive()) {
+            I1.resetHP();
             return I1;
         }
+        I2.resetHP();
         return I2;
     }
 
     /**
-     * IDK
+     * Simulates the battle until one instructor has lost (health less <= 0)
      */
     @Override
     public void run() {
