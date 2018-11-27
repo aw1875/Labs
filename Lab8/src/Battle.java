@@ -34,7 +34,7 @@ public class Battle extends Thread {
         time = 0;
         while (true) {
             try {
-                Thread.sleep(1);
+                Thread.sleep(1000);
                 time++;
             } catch (InterruptedException e) {
                 e.printStackTrace();
