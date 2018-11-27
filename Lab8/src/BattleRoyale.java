@@ -33,9 +33,8 @@ public class BattleRoyale {
                 battles[i] = new Battle(instructors.get(0), instructors.get(1));
                 battles[i].start();
             }
-
             for (int i = 0; i < battles.length; i++) {
-                battles[i].join();
+                    battles[i].join();
             }
         }
     }
