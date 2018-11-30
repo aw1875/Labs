@@ -34,6 +34,18 @@ public class BattleRoyale {
         }
 
         Battle battles [] = new Battle[instructors.size()-1];
+<<<<<<< HEAD
+        while (true) {
+            System.out.println("The battle royal is about to begin");
+            System.out.println("Round " + round + " is starting...");
+            for (int i = 0; i < battles.length; i++) {
+                System.out.println("The battle between " + instructors.get(i).getName() + " and " + instructors.get(i+1).getName() + " has begun!!!");
+                battles[i] = new Battle(instructors.get(0), instructors.get(1));
+                battles[i].start();
+            }
+            for (int i = 0; i < battles.length; i++) {
+                    battles[i].join();
+=======
         System.out.println("The battle royal is about to begin");
         System.out.println("Round " + round + " is starting...");
 
@@ -77,6 +89,7 @@ public class BattleRoyale {
                     currentBattles = 0;
                     System.out.println("Round " + round + " is starting...");
                 }
+>>>>>>> dd56f85e6ecfc5dde4901fd80f5b92e36994b0d9
             }
         }
         System.out.println(winnerName + " is victorious!!!");
