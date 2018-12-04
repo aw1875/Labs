@@ -27,7 +27,7 @@ public class C4TextView implements Observer<Move>{
         }
         printBoard(pushData.getBoard());
 
-        if(pushData.isWinner()){
+        if(pushData.isWinner() == false){
             System.out.println(String.format("Player %s has won!", pushData.getPlayer()));
             winner = true;
         }
